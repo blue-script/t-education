@@ -18,11 +18,13 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 rl.on('line', function (data) {
-  const parts= Number(data);
+  const parts = Number(data);
   let cnumberOfTimesost = Math.ceil(Math.log2(parts))
 
   console.log(cnumberOfTimesost)
   rl.close()
 })
-
+rl.on('close', () => {
+  process.exit(0);
+});
 // enter: 6, output: 3

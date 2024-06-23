@@ -16,7 +16,7 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 rl.on('line', function (data) {
-  const [A, B, C, D] = data.split(' ').map(Number);
+  const [A, B, C, D] = data.split(' ').map(n=>+n);
   let cost = A
 
   if (D > B) {
